@@ -1,0 +1,1001 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/6/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/08/12/20240805-20240811%E5%91%A8%E5%A4%8D%E7%9B%98/" target="_self">
+          20240805-20240811周复盘
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/08/12/20240805-20240811%E5%91%A8%E5%A4%8D%E7%9B%98/" target="_self">
+        <div>
+          每周复盘 我这周遇到哪些问题？  网站搭建完成，正在备案 打单子，开服务点，天猫打单子 哥飞的文章整理了30篇 小北的微博整理了一下 西风整理至少7篇，积木篇整理 锻炼每天估计有半小时 智能体完成打卡     在本地搭建了astro的环境 整理座椅电梯知识库 整理了一些出海信息，加入森淼星球，买了一个小报童，看了下生财有术航海手册   我的解决方式是什么？  搜索 大模型：kimi，gpt 现在依
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-08-12 10:00" pubdate>
+              2024-08-12
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97/" class="category-chain-item">工作日志</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%91%A8%E5%A4%8D%E7%9B%98/">#周复盘</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/08/11/%E5%87%BA%E6%B5%B7%E4%BF%A1%E6%81%AF%E6%95%B4%E7%90%86/" target="_self">
+          出海信息整理
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/08/11/%E5%87%BA%E6%B5%B7%E4%BF%A1%E6%81%AF%E6%95%B4%E7%90%86/" target="_self">
+        <div>
+          黑哥的梦呓https://hackersay.top/ 在 Vercel 部署网站需采取的安全方案https://hackersay.top/posts/the-security-measures-needed-for-deploying-websites-on-vercel/ 森淼出海SEO导航https://tdkseo.top/ 生财有术出海第一站https://scys.com/activ
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-08-11 22:29" pubdate>
+              2024-08-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%B5%9A%E9%92%B1/" class="category-chain-item">赚钱</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%B5%9A%E9%92%B1/%E5%87%BA%E6%B5%B7/" class="category-chain-item">出海</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%87%BA%E6%B5%B7/">#出海</a>
+            
+              <a href="/tags/%E4%BF%A1%E6%81%AF%E6%95%B4%E5%90%88/">#信息整合</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/08/11/astro%E6%90%AD%E5%BB%BA%E6%97%A0%E4%B8%BB%E9%A2%98-%E7%AC%AC%E4%B8%80%E7%AF%87/" target="_self">
+          astro搭建无主题-第一篇
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/08/11/astro%E6%90%AD%E5%BB%BA%E6%97%A0%E4%B8%BB%E9%A2%98-%E7%AC%AC%E4%B8%80%E7%AF%87/" target="_self">
+        <div>
+          Astro看群里提到了，astro，现在正在建设的官网使用的腾讯的建站工具，下一个官网用astro，尝试Astro建站不入门指南Astro 三岁啦，历史上的重要时刻速览Astro 开启网站性能与开发效率的双重提升之旅 在这里可以一键部署：https://vercel.com/templates/astro/astro-paper这里有一个演示站： https://astro-paper.pages
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-08-11 17:16" pubdate>
+              2024-08-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/" class="category-chain-item">软件工具</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/Astro/" class="category-chain-item">Astro</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Astro/">#Astro</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/08/11/2024%E5%B9%B408%E6%9C%8811%E6%97%A5%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" target="_self">
+          2024年08月11日工作记录
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/08/11/2024%E5%B9%B408%E6%9C%8811%E6%97%A5%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" target="_self">
+        <div>
+          每日工作计划模板最近要做的事情赚钱相关 一个电梯官网 &#x3D;&#x3D;》引流&#x3D;&#x3D;》转化 另外一个电梯官网&#x3D;&#x3D;》引流&#x3D;&#x3D;》转化 挖掘老龄化需求的信息集合网站&#x3D;&#x3D;》广告 学中文网站 &#x3D;&#x3D;》广告（调研、搜集学中文的需求、难点，找相关信息，后续整理相关的信息，建设网站，建独立站，然后进行转换变现，涉
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-08-11 10:49" pubdate>
+              2024-08-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97/" class="category-chain-item">工作日志</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">#工作记录</a>
+            
+              <a href="/tags/2024%E5%B9%B408%E6%9C%88/">#2024年08月</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/08/10/%E5%90%91%E9%A1%BE%E5%B0%8F%E5%8C%97%E5%AD%A6%E4%B9%A0/" target="_self">
+          向顾小北学习
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/08/10/%E5%90%91%E9%A1%BE%E5%B0%8F%E5%8C%97%E5%AD%A6%E4%B9%A0/" target="_self">
+        <div>
+          写在前面  单独用一篇文章，用来向顾小北学习，因为他是一个拿到结果的人，也是一个狠人，我跟他的性格有些相似之处，比如独狼式的性格，不抽烟、不喝酒、不打游戏，等等，  我跟小北现在差距很大，向着狠人学习，如果有人不小心看到，就恰好看一下吧。此篇按照我的理解，分解他的文字，用来自我学习，不商用。   顾小北微博名：小北带你飞， 网址：https://weibo.com/u/1660737882  顾小
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-08-10 20:03" pubdate>
+              2024-08-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%B5%9A%E9%92%B1/" class="category-chain-item">赚钱</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%B5%9A%E9%92%B1/%E9%A1%BE%E5%B0%8F%E5%8C%97/" class="category-chain-item">顾小北</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%A1%BE%E5%B0%8F%E5%8C%97/">#顾小北</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/08/10/2024%E5%B9%B408%E6%9C%8810%E6%97%A5%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" target="_self">
+          2024年08月10日工作记录
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/08/10/2024%E5%B9%B408%E6%9C%8810%E6%97%A5%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" target="_self">
+        <div>
+          每日工作计划模板今天的计划 任务列表 锻炼1小时，不知道有没有1小时 西风文章整理一篇，职场篇 个人网站图片填充完了，差不多了，再修改几个主图 打单子    为什么做？- - -  如何做？ :  :  :  需要准备哪些？-  …  有没有可以协助的人提供帮助？-  …  今天完成情况 完成度: 百分比或具体完成情况  锻炼半小时，在河边思考 西风文章整理一篇，职场篇 《机会在于人事变动》 整理
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-08-10 11:34" pubdate>
+              2024-08-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97/" class="category-chain-item">工作日志</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">#工作记录</a>
+            
+              <a href="/tags/2024%E5%B9%B408%E6%9C%88/">#2024年08月</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/08/09/%E7%9B%96%E6%B4%9B%E6%99%AE%E8%87%AA%E6%88%91%E5%88%86%E6%9E%90/" target="_self">
+          盖洛普自我分析
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/08/09/%E7%9B%96%E6%B4%9B%E6%99%AE%E8%87%AA%E6%88%91%E5%88%86%E6%9E%90/" target="_self">
+        <div>
+          盖洛普自我分析 搜集 排难 前瞻 学习 信仰 回顾  审慎  思维  专注  责任  从您的前五大优势入手。它们是您最突出的才干。  阅读与您突出的克利夫顿优势相关的所有信息。为了充分发挥您的才干，您首先需要理解自己的才干，并懂得如何向他人介绍这些才干。 反思自我。思考您的经历、动力以及您如何看待自己。然后，考虑以下您的克利夫顿优势是如何塑造您的，包括您所做的事情、如何做的以及为什么这样做。 每天
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-08-09 11:04" pubdate>
+              2024-08-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF/" class="category-chain-item">自我成长</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF/%E7%9B%96%E6%B4%9B%E6%99%AE/" class="category-chain-item">盖洛普</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%87%AA%E6%88%91%E8%AE%A4%E8%AF%86/">#自我认识</a>
+            
+              <a href="/tags/%E7%9B%96%E6%B4%9B%E6%99%AE/">#盖洛普</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/08/09/2024%E5%B9%B408%E6%9C%8809%E6%97%A5%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" target="_self">
+          2024年08月09日工作记录
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/08/09/2024%E5%B9%B408%E6%9C%8809%E6%97%A5%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" target="_self">
+        <div>
+          每日工作计划模板今天的计划 任务列表 锻炼1小时 西风文章整理一篇 个人网站内容文章列表先生成完，图片处理完 打单子    为什么做？- - -  如何做？ :  :  :  需要准备哪些？-  …  有没有可以协助的人提供帮助？-  …  今天完成情况 完成度: 百分比或具体完成情况  锻炼1小时，不知道有没有1小时 西风文章整理一篇，职场篇 个人网站图片填充完了，差不多了，再修改几个主图 打单
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-08-09 09:36" pubdate>
+              2024-08-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97/" class="category-chain-item">工作日志</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">#工作记录</a>
+            
+              <a href="/tags/2024%E5%B9%B408%E6%9C%88/">#2024年08月</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/08/08/2024%E5%B9%B408%E6%9C%8808%E6%97%A5%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" target="_self">
+          2024年08月08日工作记录
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/08/08/2024%E5%B9%B408%E6%9C%8808%E6%97%A5%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" target="_self">
+        <div>
+          每日工作计划模板今天的计划 任务列表 锻炼1小时 西风文章整理一篇 个人网站内容文章列表先生成完，图片处理完 打单子    为什么做？- - -  如何做？ :  :  :  需要准备哪些？-  …  有没有可以协助的人提供帮助？-  …  今天完成情况 完成度: 百分比或具体完成情况  锻炼，下午的时候，出去转了一圈 西风文章整理了一篇，并且提出了自己的思考，从中学到了什么，有什么借鉴意义，积木
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-08-08 09:07" pubdate>
+              2024-08-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97/" class="category-chain-item">工作日志</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">#工作记录</a>
+            
+              <a href="/tags/2024%E5%B9%B408%E6%9C%88/">#2024年08月</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/08/07/2024%E5%B9%B408%E6%9C%8807%E6%97%A5%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" target="_self">
+          2024年08月07日工作记录
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/08/07/2024%E5%B9%B408%E6%9C%8807%E6%97%A5%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/" target="_self">
+        <div>
+          每日工作计划模板今天的计划 任务列表 锻炼1小时 西风文章整理一篇 个人网站内容文章列表先生成完 整理一些电梯概念性的东西，类似于知识库 打单子 看白杨的小报童，整理哥飞的文章，包括30篇以及他整理的分类 看哥飞的文章，小报童    为什么做？- - -  如何做？ :  :  :  需要准备哪些？-  …  有没有可以协助的人提供帮助？-  …  今天完成情况 完成度: 百分比或具体完成情况
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-08-07 11:45" pubdate>
+              2024-08-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97/" class="category-chain-item">工作日志</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">#工作记录</a>
+            
+              <a href="/tags/2024%E5%B9%B408%E6%9C%88/">#2024年08月</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/5/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/#board">7</a><a class="page-number" href="/page/8/#board">8</a><a class="extend next" rel="next" href="/page/7/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
